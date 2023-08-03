@@ -1,0 +1,28 @@
+//fonts
+$poppins: 'Poppins', sans-serif;
+$inter: 'Inter', sans-serif;
+$manrope: 'Manrope', sans-serif;
+$jakarta: 'Plus Jakarta Sans', sans-serif;
+$robboto: 'Roboto', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+$publicSans: 'Public Sans', sans-serif;
+
+//colors
+$primary: #606060;
+$acent: #6c5fbc; 
+
+//button
+%button {
+   font-family: $poppins;
+   font-weight: 500;
+   font-size: 18px;
+   color: #f9f9f9;
+   background-color: $acent;
+   border: 1px solid transparent;
+   transition: all .3s linear;
+   &:hover {
+      color: $acent;
+      border-color: $acent;
+      background-color: #ffffff;
+   }
+}

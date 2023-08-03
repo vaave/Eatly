@@ -1,0 +1,50 @@
+.slick {
+   &-list {
+      overflow: hidden;
+   }
+   
+   &-track {
+      display: flex;
+   }
+}
+
+.review .slick {
+   &-track {
+      align-items: flex-start;
+   }
+   
+   &-slide {
+      max-width: 510px;
+   }
+
+   &-dots {
+      position: absolute;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: 540px;
+      right: 0;
+      bottom: -7%;
+      display: flex;
+      flex-wrap: wrap;
+   
+      & li {
+         flex: 0 1 33.33%;
+         &.slick-active button {
+            background-color: $acent;
+         }
+      }
+   
+      & button {
+         font-size: 0;
+         width: 181px;
+         height: 11px;
+         border-radius: 50px;
+         margin-right: -3px;
+         background-color: rgba($color: $acent, $alpha: .2);
+         padding: 0;
+         border: none;
+         cursor: pointer;
+      }
+   }
+}

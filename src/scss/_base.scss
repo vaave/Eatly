@@ -1,0 +1,149 @@
+html {
+   box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+   box-sizing: inherit;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+img {
+   max-width: 100%;
+   vertical-align: top;
+}
+
+.list-reset {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: $poppins;
+   overflow-x: hidden;
+   &.lock {
+      overflow: hidden;
+   }
+}
+
+.container {
+   max-width: 1280px;
+   margin: 0 auto;
+   padding: 0 15px;
+   &--padding {
+      padding-top: 100px;
+      padding-bottom: 120px;
+      border-bottom: 1px solid #cbcbcb;
+   }
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   span {
+      font-family: $poppins;
+      font-weight: 600;
+      font-size: 21px;
+      color: $acent;
+      margin-left: 5px;
+   }
+}
+
+.menu {
+   display: flex;
+
+   &__item {
+      margin-right: 30px;
+      &:nth-child(n+4) {
+         margin-right: 0;
+      }
+   }
+
+   &__link {
+      font-family: $inter;
+      font-weight: 500;
+      font-size: 18px;     
+      color: $primary;
+      transition: color .2s ease;
+      &:hover {
+         color: $acent;
+      }
+      &--selected {
+         color: $acent;
+      }
+   }
+}
+
+.title {
+   font-family: $poppins;
+   font-weight: 600;
+   font-size: 45px;
+   text-align: center;
+   color: #323142;
+   span {
+      color: $acent;
+   }
+   &--small {
+      font-size: 35px;
+      text-align: left;
+   }
+}
+
+.view-button {
+   font-family: $poppins;
+   font-weight: 500;
+   font-size: 20px;
+   letter-spacing: -0.1px;
+   color: #acadb9;
+   svg {
+      width: 19px;
+      height: 19px;
+      stroke: #acadb9;
+      fill: none;
+   }
+}
+
+.tag {
+   max-width: fit-content;
+   font-family: $poppins;
+   border-radius: 5px;
+   padding: 3px 5px;
+   &--red {
+      color: #fb461d;
+      background-color:  #f7c5ba;
+   }
+   &--yellow {
+      color: #daa41a;
+      background-color:  #f7edd0;
+   }
+   &--green {
+      color: #309d5c;
+      background-color:  #72e7a1;
+   }
+}
+
+.raiting {
+   font-family: $manrope;
+   color: #8e97a6;
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: 100%;
+      background: url(./../src/img/decor/star.svg) top center no-repeat;
+   }
+}
+
+a:focus, 
+button:focus,
+input:focus {
+   outline-color: $acent;
+   outline-offset: 2px;
+}

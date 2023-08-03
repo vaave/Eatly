@@ -1,0 +1,76 @@
+.decor {
+  position: relative;
+
+   &__img {
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         top:-3%;
+         left: 5%;
+         width: 100%;
+         height: 100%;
+         border-radius: 100%;
+         z-index: -1;
+         background-color: $acent;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         top: 12%;
+         right: -13%;
+         width: 100px;
+         height: 100px;
+         z-index: -1;
+         background: url(./../src/img/decor/arrow.svg) top center no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &__meal {
+      position: absolute;
+      bottom: 90%;
+      left: 40%;
+      width: 73%;
+   }
+
+   &__meal-inner {
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         bottom: 100%;
+         right: 8%;
+         width: 42px;
+         height: 28px;
+         background: url(./../src/img/decor/pattern-1.svg) top center no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &__graph {
+      position: absolute;
+      bottom: -15%;
+      left: 0;
+      max-width: 50%;
+   }
+
+   &__graph-inner {
+      background-color: #ffffff;      
+      box-shadow: 14.1205px 18.8273px 37.6546px rgba(26, 32, 44, 0.15);
+      border: 1px solid #edf2f7;
+      border-radius: 14px;
+      padding: 5px 0;
+      &::before {
+         content: "";
+         position: absolute;
+         top: 100%;
+         left: -10%;
+         width: 38px;
+         height: 33px;
+         z-index: 2;
+         background: url(./../src/img/decor/pattern-2.svg) top center no-repeat;
+         background-size: cover;
+      } 
+   }
+}

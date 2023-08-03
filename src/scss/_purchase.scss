@@ -1,0 +1,167 @@
+.purchase {
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      column-gap: 10px;
+   }
+
+   &__header {
+      flex: 0 1 50%;
+   }
+
+   &__title {
+      text-align: left;
+      margin: 0 0 50px;
+   }
+
+   &__meal {
+      display: grid;
+      grid-template-columns: .7fr;
+      
+      & .meal-item {
+         box-shadow: 0 20px 30px rgba(70, 70, 70, 0.1);
+         margin-bottom: 10px;
+      }
+   }
+
+   &__graph {
+      flex: 0 1 47%;
+      background: #ffffff;
+      border: 1px solid #edf2f7;
+      border-radius: 25px;
+      box-shadow: 0 20px 30px rgba(50, 49, 66, 0.2);
+      padding: 43px;
+   }
+
+   &__graph-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 45px;
+   }
+
+   &__graph-title {
+      font-family: $manrope;
+      font-weight: 800;
+      font-size: 28px;
+      color: #1a202c;
+      margin: 0;
+   }
+
+   &__select {
+      font-family: $manrope;
+      font-weight: 600;
+      font-size: 19px;
+      letter-spacing: 0.6px;
+      color: #1a202c;
+      padding: 12px 18px;
+      background: #fafafa;
+      border-radius: 13px;
+      cursor: pointer;
+   }
+
+   &__graph-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #edf2f7;
+      border-radius: 19px;
+      padding: 25px 25px 55px;
+      &::before, &::after {
+         content: "";
+         position: absolute;
+         bottom: 25px;
+         left: 25px;
+         right: 25px;
+         height: 9.42px;
+         border-radius: 78px;
+      }
+      &::before {
+         opacity: 0.2;
+      }
+      &--purpule {
+         .purchase__graph-icon {
+            background-color: #f4f0ff;
+            &::after {
+               background: url(./../src/img/decor/wallet.svg) top center no-repeat;
+            }
+         }
+
+         &::before, &::after {
+            background-color: #6b5fbc;
+         }
+         &::after {
+            width: 70%;
+         }  
+      }
+      &--yellow {
+         .purchase__graph-icon {
+            background-color: #f2fdf6;
+            &::after {
+               background: url(./../src/img/decor/money.svg) top center no-repeat;
+            }
+         }
+
+         &::before, &::after {
+            background-color: #fbac18;
+         }
+         &::after {
+            width: 60%;
+         } 
+      }
+   }
+
+   &__graph-inner {
+      display: flex;
+      align-items: center;
+   }
+
+   &__graph-icon {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 25px;
+         height: 25px;
+         transform: translate(-50%, -50%);
+         background-size: cover;
+      }
+   }
+
+   &__graph-about {
+      margin-left: 15px;
+      font-family: $manrope;
+      letter-spacing: 0.6px;
+   }
+
+   &__graph-name {
+      font-weight: 800;
+      font-size: 19px;
+      color: #1A202C;
+      margin: 0 0 7px;
+   }
+
+   &__graph-text {
+      font-weight: 500;
+      font-size: 16px;
+      color: #A0AEC0;
+      margin: 0;
+   }
+
+   &__graph-cost {
+      font-family: $manrope;
+      font-weight: 800;
+      font-size: 22px;
+      color: #1a202c;
+   }
+}

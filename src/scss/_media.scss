@@ -1,0 +1,494 @@
+@media(max-width: 991px) {
+   .hero {
+      &__title {
+         font-size: 60px;
+      }
+   }
+
+   .mobile {
+      &__container {
+         flex-direction: column;
+      }
+
+      &__img {
+         order: 2;
+      }
+
+      &__content {
+         order: 1;
+         text-align: center;
+         margin-bottom: 100px;
+      }
+
+      &__title {
+         text-align: center;
+      }
+
+      &__list {
+         padding-left: 20px;
+      }
+
+      &__item {
+         text-align: left;
+      }
+   }
+
+   .restaurants {
+      &__inner {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   .dishes {
+      &__inner {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+
+   .purchase {
+      &__container {
+         display: block;
+      }
+
+      &__meal {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 15px;
+         margin-bottom: 40px;
+      }
+
+      &__graph {
+         max-width: 80%;
+         margin: 0 auto;
+      }
+   }
+
+   .sale {
+      &__inner {
+         &::after {
+            width: 220px;
+            height: 220px;
+            top: 50%;
+            right: 2%;
+         }
+      }
+   }
+
+   .modal {
+      &__content {
+         display: block;
+         max-width: 80%;
+      }
+      &__close {
+         color: $acent;
+      }
+      &__decor {
+         display: none;
+      }
+   }
+}
+
+@media(max-width: 767px) {
+
+   .container--padding {
+      padding-top: 50px;
+      padding-bottom: 60px;
+   }
+
+   .title {
+      font-size: 35px;
+      margin-bottom: 40px;
+   }
+
+   .header {
+      &__body {
+         padding: 10px 0;
+      }
+      &__logo {
+         flex: 1 1 auto;
+      }
+      &__burger {
+         display: block;
+         width: 30px;
+         height: 20px;
+         position: relative;
+         z-index: 7;
+         &::before,
+         &::after,
+         span {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $primary;
+            left: 0;
+            transition: transform .3s ease 0s;
+         }
+
+         &::before {
+            top: 0;
+         }
+         &::after {
+            bottom: 0;
+         }
+
+         span {
+            top: 9px;
+         }
+
+         &.active::before {
+            transform: rotate(45deg);
+            top: 9px;
+         }
+         &.active::after {
+            transform: rotate(-45deg);
+            bottom: 9px;
+         }
+         &.active span {
+            transform: scale(0);
+         }
+      }
+
+      &__menu {
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 60%;
+         height: 100%;
+         background-color: #f9f9f9;
+         overflow: auto;
+         z-index: 6;
+         padding: 70px 10px 20px;
+         transition: all .3s ease 0s;
+         &.active {
+            right: 0;
+         }
+      }
+      
+      &__list {
+         display: block;
+         padding-top: 30px;
+         .menu {
+            &__item {
+               margin: 0 0 20px 0;
+            }
+
+            &__link {
+               font-size: 35px;
+            }
+         }
+      }
+   
+      &__form {
+         margin-right: 20px;
+      }
+      &__button {
+         &--login {
+            margin-right: 15px;
+         }
+      }
+   }
+
+   .hero {
+      padding-top: 140px;
+
+      &__container {
+         flex-direction: column;
+      }
+
+      &__header {
+         text-align: center;
+         margin-bottom: 100px;
+      }
+
+      &__btns, &__raiting {
+         justify-content: center;
+      }
+
+      &__decor {
+         max-width: 100%;
+      }
+
+   }
+
+   .features {
+      &__item {
+         position: relative;
+         flex-basis: 100%;
+         padding: 20px 0;
+         border-right: none;
+         &:last-child {
+            border: none;
+         }
+         &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background-color: #c5c5c5;
+         }
+      }
+   }
+
+   .restaurants {
+      &__inner {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   .dishes {
+      &__inner {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   .purchase {
+      &__meal {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      &__graph {
+         max-width: 100%;
+      }
+   }
+
+   .review {
+      &__item {
+         & + & {
+            margin-left: 5px;
+         }
+      }
+      .slick {
+         &-slide {
+            max-width: 100%;
+         }
+      }
+      
+   }
+
+   .sale {
+      &__inner {
+         &::after {
+            display: none;
+         }
+      }
+   }
+
+   .modal {
+      &__form {
+         max-width: 80%;
+      }
+   }
+}
+
+@media(max-width: 575px) {
+
+   .purchase {
+      &__meal {
+         grid-template-columns: 1fr;
+      }
+
+      &__graph {
+         padding: 20px;
+      }
+   }
+
+   .review {
+      &__item {
+         padding: 15px;
+      }
+      &__header {
+         &::after {
+            display: none;
+         }
+      }
+      &__text {
+         font-size: 15px;
+      }
+      .slick {
+         &-dots {
+            max-width: 300px;
+            flex-wrap: nowrap;
+            right: 50%;
+            transform: translateX(50%);
+            & button {
+               width: 100px;
+            }
+         }
+      }
+   }
+
+   .sale {
+      margin-bottom: 50px;
+
+      &__inner {
+         padding: 20px 30px;
+      }
+      &__title {
+         font-size: 50px;
+      }
+      &__form {
+         display: block;
+      }
+      &__input {
+         width: 100%;
+         height: 50px;
+         border-radius: 10px;
+         margin-bottom: 20px;
+      }
+      &__button {
+         position: static;
+         transform: none;
+      }
+   }
+
+   .footer {
+      padding: 35px 0;
+
+      &__header {
+         display: block;
+      }
+      &__logo {
+         margin-bottom: 20px;
+      }
+      &__end {
+         flex-direction: column;
+      }
+      &__copyright {
+         order: 2;
+      }
+      &__social-list {
+         order: 1;
+         margin-bottom: 30px;
+      }
+   }
+
+   .modal {
+      &__content {
+         max-width: 100%;
+      }
+      &__logo {
+         margin-bottom: 20px;
+      }
+      &__form-title {
+         font-size: 30px;
+         margin-bottom: 25px;
+      }
+      &__form {
+         max-width: 100%;
+         margin-bottom: 50px;
+      }
+      &__form-fast {
+         margin-bottom: 15px;
+      }
+      &__choise {
+         margin-bottom: 15px;
+      }
+      &__form-input {
+         height: 60px;
+      }
+      &__form-button {
+         padding: 15px 0;
+      }
+   }
+}
+
+@media(max-width: 424px) {
+
+   .header {
+      &__body {
+         padding: 15px 0;
+      }
+      &__menu {
+         width: 90%;
+      }
+      &__list {
+         .header__button {
+            display: block;
+         }
+      }
+      &__form {
+         display: none;
+      }
+      &__button {
+         font-size: 30px;
+      }
+   }
+
+   .mobile {
+      &__img {
+         &::before {
+            left: 90%;
+         }
+      }
+   }
+
+   .dishes {
+      &__inner {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   .purchase {
+      &__graph-title {
+         font-size: 20px;
+      }
+
+      &__select {
+         font-size: 12px;
+         padding: 10px;
+      }
+
+      &__graph-item {
+         padding: 15px;
+         padding-bottom: 25px;
+         display: block;
+         &::before, &::after {
+            left: 15px;
+            right: 15px;
+            bottom: 10px;
+         }
+      }
+
+      &__graph-inner {
+         margin-bottom: 20px;
+      }
+
+      &__graph-cost {
+         text-align: right;
+      }
+   }
+
+   .footer {
+      &__header {
+         padding-bottom: 0;
+         margin-bottom: 25px;
+      }
+      &__list {
+         display: block;
+         .menu__item {
+            margin-right: 0;
+            margin-bottom: 20px;
+         }
+      }
+   }
+
+   .modal {
+      &__signup {
+         padding-top: 65px;
+      }
+      &__logo {
+         display: none;
+      }
+   }
+}
+
+@media(max-width: 374px) {
+   .hero {
+      &__btns, &__raiting {
+         flex-direction: column;
+      }
+   }
+}

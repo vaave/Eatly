@@ -1,0 +1,47 @@
+.meal-item {
+   background: #ffffff;
+   border-radius: 16px;
+   box-shadow: 0 16px 25px rgba(70, 70, 70, 0.05);
+   padding: 5px 15px;
+   display: flex;
+   align-items: center;
+
+   &__img {
+      max-width: 23%;
+      margin-right: 20px;
+   }
+
+   &__info {
+      width: 100%;
+   }
+
+   &__name {
+      font-family: $poppins;
+      font-weight: 600;
+      font-size: 16px;
+      color: #323142;
+      margin: 0 0 5px;
+   }
+
+   &__status {
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 10px; 
+      color: #323142;
+      margin: 0 0 5px;
+      &--red {
+         color: #fb461d;
+      }
+      &--green {
+         color: #309d5c;
+      }
+   }
+
+   &__time {
+      text-align: right;
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 11px;
+      color: #acadb9;
+   }
+}

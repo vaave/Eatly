@@ -1,0 +1,64 @@
+.sale {
+   margin-bottom: 100px;
+
+   &__inner {
+      padding: 40px 65px;
+      background: $acent url(./../src/img/sale-bg.jpg) top center no-repeat;
+      background-size: cover;
+      border-radius: 14px;
+      position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 30%;
+         right: 5%;
+         width: 274px;
+         height: 276px;
+         background: url(./../src/img/food.png) top center no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &__title {
+      font-family: $poppins;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 70px;
+      color: #ffffff;
+      margin: 0 0 20px;
+   }
+
+   &__form {
+      display: inline-block;
+      position: relative;
+   }
+
+   &__input {
+      width: 440px;
+      height: 68px;
+      background: #ffffff;
+      box-shadow: 0 7px 45px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      font-family: $poppins;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      color: #878787;
+      padding-left: 20px;
+   }
+
+   &__button {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+
+   &__btn {
+      @extend %button;
+      font-size: 15px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 15px 25px;
+      border-radius: 11px;
+   }
+}

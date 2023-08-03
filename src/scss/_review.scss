@@ -1,0 +1,79 @@
+.review {
+
+   .container--padding {
+      border-bottom: none;
+   }
+
+   &__title {
+      margin: 0 0 80px;
+   }
+
+   &__inner {
+      position: relative;
+   }
+
+   &__item {
+      background-color: #ffffff;
+      border: 2px solid #f4f4f6;
+      border-radius: 21px;
+      padding: 38px;
+      position: relative;
+      & + & {
+         margin-left: 30px;
+      }
+   }
+
+   &__header {
+      display: none;
+      align-items: center;
+      margin-bottom: 30px;
+      position: relative;
+      &.active {
+         display: flex;
+         
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: 0;
+         width: 58px;
+         height: 44px;
+         transform: translateY(-50%);
+         background: url(./../src/img/decor/quotes.svg) top center no-repeat;
+         background-size: cover;
+      }
+   }
+
+   &__img {
+      flex: 0 0 71px;
+   }
+
+   &__info {
+      margin-left: 10px;
+   }
+
+   &__name {
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 21px;
+      color: #030314;
+      margin-bottom: 5px;
+   }
+
+   &__slogan {
+      font-family: $quicksand;
+      font-weight: 500;
+      font-size: 17px;
+      color: #5E5D5D;
+   }
+
+   &__text {
+      font-family: $poppins;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.4;
+      color: $primary;
+      margin: 0 0 40px;
+   }
+}

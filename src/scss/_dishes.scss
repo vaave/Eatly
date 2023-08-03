@@ -1,0 +1,112 @@
+.dishes {
+
+   &__title {
+      margin: 0 0 75px;
+   }
+
+   &__inner {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px 30px;
+      margin-bottom: 65px;
+      & a:focus {
+         outline: none;
+      }
+   }
+
+   &__item {
+      background-color: #ffffff;
+      border: 1.44089px solid #f4f4f6;
+      box-shadow: 7px 82px 41px rgba(229, 229, 229, 0.7);
+      border-radius: 35px;
+      overflow: hidden;
+      padding: 17px;
+      position: relative;
+      transition: transform .3s ease;
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
+
+   &__img {
+      text-align: center;
+   }
+
+   &__tag {
+      font-size: 12px;
+      margin-bottom: 3px;
+   }
+
+   &__name {
+      font-family: $poppins;
+      font-weight: 600;
+      font-size: 23px;
+      color: #323142;
+      margin: 0 0 3px;
+   }
+
+   &__info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+   }
+
+   &__dur {
+      font-family: $manrope;
+      font-size: 17px;;
+      color: #8E97A6;
+      margin-right: 30px;
+   }
+
+   &__raiting {
+      font-size: 17px;
+      &::before {
+         width: 23px;
+         height: 23px;
+      }
+   }
+
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      columns: 5px;
+   }
+
+   &__cost {
+      font-family: $manrope;
+      font-weight: 700;
+      font-size: 26px;
+      color: #323142;
+      span {
+         color: #8e97a6;
+         font-size: 20px;
+      }
+   }
+
+   &__plus {
+      background-color: #323142;
+      padding: 10px 10px 5px;
+      border-radius: 9px;
+      svg {
+         width: 16px;
+         height: 16px;
+         fill: #ffffff;
+      }
+   }
+
+   &__fav {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      svg {
+         width: 23px;
+         height: 19px;
+         fill: #000;
+      }
+   }
+
+   &__button {
+      text-align: right;
+   }
+}

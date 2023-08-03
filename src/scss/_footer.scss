@@ -1,0 +1,50 @@
+.footer {
+   padding: 80px 0 40px;
+   background-color: #eaeaea;
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #cbcbcb;
+      margin-bottom: 50px;
+   }
+
+   &__end {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__copyright {
+      font-family: $inter;
+      font-weight: 500;
+      font-size: 17px;    
+      color: #999999;
+      margin: 0;
+   }
+
+   &__social-list {
+      display: flex;
+   }
+
+   &__social-item {
+      margin-right: 40px;
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   &__social-link {
+      svg {
+         width: 22px;
+         height: 22px;
+         fill: $primary;
+         transition: fill .3s ease;
+         &:hover {
+            fill: $acent;
+         }
+      }
+   }
+}
